@@ -1,13 +1,15 @@
 const fibonacci = function (number, memo = [0, 1, 1]) {
-  if (number < 0 || parseInt(number) !== number) {
+  const parsedNumber = parseInt(number);
+
+  if (isNaN(parsedNumber) || parsedNumber < 0) {
     return 'OOPS';
   }
 
-  if (number in memo) {
-    return memo[number];
+  if (parsedNumber in memo) {
+    return memo[parsedNumber];
   }
 
-  const fibonacciNumber = fibonacci(number - 1, memo) + fibonacci(number - 2, memo);
+  const fibonacciNumber = fibonacci(parsedNumber - 1, memo) + fibonacci(parsedNumber - 2, memo);
 
   memo.push(fibonacciNumber);
 
