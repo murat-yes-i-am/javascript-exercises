@@ -20,7 +20,7 @@ const palindromes = function (string) {
     }
 
     left++;
-    right++;
+    right--;
    }
 
    if (!isLetterDigit(leftChar)) {
@@ -28,7 +28,7 @@ const palindromes = function (string) {
    }
 
    if (!isLetterDigit(rightChar)) {
-    right++;
+    right--;
    }
   }
 
