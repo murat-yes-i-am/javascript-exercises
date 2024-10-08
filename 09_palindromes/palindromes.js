@@ -2,6 +2,7 @@ const palindromes = function (string) {
   const digits = Array(10).fill(1).map((value, index) => index);
   const isLetter = (char) => char.toUpperCase() !== char.toLowerCase();
   const isDigit = (char) => digits.includes(char);
+  const isLetterDigit = (char) => isLetter(char) || isDigit(char);
 
   let start = 0;
   let end = string.length - 1;
