@@ -1,6 +1,6 @@
 const palindromes = function (string) {
   const toLowerString = string.toLowerCase();
-  const digits = Array(10).fill(1).map((value, index) => index);
+  const digits = '0123456789';
   const isLetter = (char) => char.toUpperCase() !== char.toLowerCase();
   const isDigit = (char) => digits.includes(char);
   const isLetterDigit = (char) => isLetter(char) || isDigit(char);
