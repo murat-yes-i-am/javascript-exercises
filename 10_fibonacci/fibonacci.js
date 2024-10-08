@@ -1,14 +1,14 @@
-const fibonacci = function (number, memo = [1, 1]) {
+const fibonacci = function (number, memo = [0, 1, 1]) {
   if (number < 0 || parseInt(number) !== number) {
     return 'OOPS';
   }
 
-  if (memo[number - 1]) {
-    return memo[number - 1];
+  if (number in memo) {
+    return memo[number];
   }
 
   const fibonacciNumber = fibonacci(number - 1, memo) + fibonacci(number - 2, memo);
-  
+
   memo.push(fibonacciNumber);
 
   return fibonacciNumber;
