@@ -1,7 +1,17 @@
-const fibonacci = function (number) {
+const fibonacci = function (number, memo = [1, 1]) {
   if (number < 0 || parseInt(number) !== number) {
     return 'OOPS';
   }
+
+  if (memo[number - 1]) {
+    return memo[number - 1];
+  }
+
+  const fibonacciNumber = fibonacci(number - 1, memo) + fibonacci(number - 2, memo);
+  
+  memo.push(fibonacciNumber);
+
+  return fibonacciNumber;
 };
 
 // Do not edit below this line
