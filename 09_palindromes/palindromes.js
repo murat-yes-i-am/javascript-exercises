@@ -4,10 +4,10 @@ const palindromes = function (string) {
   const isDigit = (char) => digits.includes(char);
   const isLetterDigit = (char) => isLetter(char) || isDigit(char);
 
-  let start = 0;
-  let end = string.length - 1;
+  let left = 0;
+  let right = string.length - 1;
 
-  while (start < end) {
+  while (left < right) {
 
   }
 
